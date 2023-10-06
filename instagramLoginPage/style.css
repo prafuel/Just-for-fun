@@ -1,0 +1,212 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.front{
+    height: 60vh;
+    width: 28vh;
+    background-image: url(/media/instagram-front.png);
+    background-size: cover;
+    position: relative;
+    top: 4%;
+    left: 34%;
+    border-radius: 28px;
+}
+
+/* image */
+.backImage{
+    height: 70vh;
+    width: 50vh;
+    background-image: url('/media/instagram-back.png');
+    background-size: cover;
+}
+
+.instaLogo{
+    width: 200px;
+    height: 58px;
+    /* background-color: red; */
+    background-image: url('/media/instagram.png');
+    background-size: cover;
+    margin-top: 60px;
+}
+
+.loginForm{
+    height: 685px;
+    width: 350px;
+    /* background-color: rgba(162, 162, 161,0.2); */
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+.form{
+    width: 348px;
+    height: 266.98px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+
+.instagram{
+    width: 350px;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iborder{
+    border: 1px rgba(162, 156, 156,0.3) solid;
+}
+
+.username,.password{
+    width: 300px;
+    height: 45px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.login{
+    width: 300px;
+    height: 40px;
+    cursor: pointer;
+}
+.inputButton{
+    width: 100%;
+    height: 100%;
+}
+
+.inputSection{
+    padding: 9px 0px 7px 14px;
+    width: 100%;
+    height: 100%;
+    /* border: none; */
+    border: none;
+    outline: 1px rgba(162, 156, 156,0.3) solid;
+}
+
+.or{
+    width: 305px;
+    height: 16px;
+    background-image: url('/media/or.png');
+    background-color: cover;
+}
+
+.fb-ico {
+    display: flex;
+    align-items: center;
+}
+
+.fb-ico a{
+    font-size: 18px;
+    font-weight: bolder;
+    color:#385185;
+    margin-left: 10px;
+    
+}
+.fb{
+    width: 18px;
+    height: 20px;
+    background-image: url('/media/square-facebook.svg');
+    background-size: cover;
+    display: inline-block;
+}
+
+.forgot-pass{
+    font-size: 13px;
+    color:#00376b;
+}
+
+.rad{
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(0, 183, 255);
+    color: white;
+    font-weight:900;
+    outline: none;
+}
+
+
+/* dont have account */
+.dontAccount{
+    width: 350px;
+    height: 69px;
+    /* background-color: grey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+}
+
+
+/* last section */
+.lastSection{
+    width:350px ;
+    height: 95px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.store{
+    width: 136px;
+    height: 40px;
+}
+.appleStore{
+    background-image: url('/media/applePlay.png');
+    background-size: cover;
+    margin-right: 10px;
+}
+.playStore{
+    background-image: url('/media/googlePlay.png');
+    background-size:cover ;
+}
+
+.stores{
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width:1200px) {
+    .instaLogo{
+        margin-top: 22px;
+    }
+
+    .form{
+        width: 348px;
+        height: 266.98px;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (max-width:785px) {
+    .backImage {
+        display: none;
+    }
+}
