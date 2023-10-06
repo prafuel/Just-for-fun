@@ -1,0 +1,10 @@
+here are some instruction, you have to follow
+
+step1:
+	First use this command :  
+	> chmod +x requirement.sh
+	> ./requirement.sh
+step2: 
+	run main script file =>
+	> chmod +x run.sh
+	> ./run.sh
