@@ -15,12 +15,13 @@ a{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .front{
     height: 60vh;
     width: 28vh;
-    background-image: url(/media/instagram-front.png);
+    background-image: url("./media/instagram-front.png");
     background-size: cover;
     position: relative;
     top: 4%;
@@ -28,11 +29,43 @@ a{
     border-radius: 28px;
 }
 
+
+.front{
+    height: 61vh;
+    width: 28vh;
+    background-size: cover;
+    position: relative;
+    top: 4%;
+    left: 35.5%;
+
+    overflow: hidden;
+    animation-name: backgroundImageChange;
+    animation-duration: 20s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes backgroundImageChange {
+    0%, 100% {
+        background-image: url('./media/instagram-front.png');
+    }
+    25% {
+        background-image: url('./media/instagram1.png');
+    }
+    50% {
+        background-image: url('./media/instagram2.png');
+    }
+    75% {
+        background-image: url('./media/instagram3.png');
+    }
+}
+
+
 /* image */
 .backImage{
-    height: 70vh;
+    height: 72vh;
     width: 50vh;
-    background-image: url('/media/instagram-back.png');
+    background-image: url('./media/instagram-back.png');
     background-size: cover;
 }
 
@@ -40,7 +73,7 @@ a{
     width: 200px;
     height: 58px;
     /* background-color: red; */
-    background-image: url('/media/instagram.png');
+    background-image: url('./media/instagram.png');
     background-size: cover;
     margin-top: 60px;
 }
@@ -51,18 +84,18 @@ a{
     /* background-color: rgba(162, 162, 161,0.2); */
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
+    justify-content: center;
     align-items: center;
 }
 .form{
     width: 348px;
-    height: 266.98px;
+    height: 215.98px;
     /* background-color: red; */
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 
@@ -107,7 +140,7 @@ a{
 .or{
     width: 305px;
     height: 16px;
-    background-image: url('/media/or.png');
+    background-image: url('./media/or.png');
     background-color: cover;
 }
 
@@ -126,7 +159,7 @@ a{
 .fb{
     width: 18px;
     height: 20px;
-    background-image: url('/media/square-facebook.svg');
+    background-image: url('./media/square-facebook.svg');
     background-size: cover;
     display: inline-block;
 }
@@ -174,12 +207,12 @@ a{
     height: 40px;
 }
 .appleStore{
-    background-image: url('/media/applePlay.png');
+    background-image: url('./media/applePlay.png');
     background-size: cover;
     margin-right: 10px;
 }
 .playStore{
-    background-image: url('/media/googlePlay.png');
+    background-image: url('./media/googlePlay.png');
     background-size:cover ;
 }
 
