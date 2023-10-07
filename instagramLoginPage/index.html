@@ -13,7 +13,7 @@
     <div class="container">
         <div class="Box1">
             <div class="image">
-                
+
                 <div class="backImage">
                     <div class="front"></div>
                 </div>
@@ -32,12 +32,14 @@
                                 placeholder="Password"></div>
                         <div class="login"><Button type="submit" class="rad inputButton">Log in</Button></div>
                     </div>
-                    <div class="or"></div>
-                        
+                    <div class="lower">
+                        <div class="or"></div>
+
                         <div class="fb-ico">
                             <div class="fb"></div> <span> <a href="">Log in with Facebook</a></span>
                         </div>
-                    <div class="forgot-pass">Forgotten your password?</div>
+                        <div class="forgot-pass">Forgotten password?</div>
+                    </div>
                 </div>
             </div>
 
@@ -60,15 +62,11 @@
     </div>
 
 
-    <footer>
-        
-    </footer>
-
     <script>
         const login = document.querySelector('.login button');
         const username = document.querySelector('.username input');
         const password = document.querySelector('.password input');
-        login.addEventListener('click',(e)=>{
+        login.addEventListener('click', (e) => {
             e.preventDefault();
             alert("Chutiya banaya tumko!!!");
             console.log(username.value);
