@@ -254,6 +254,10 @@ a{
         justify-content: space-between;
         margin-top: 5px;
     }
+    
+    .loginForm{
+        margin-right: 20px;
+    }
 }
 
 @media only screen and (max-width:785px) {
