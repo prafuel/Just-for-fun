@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 change_mac() {
     interface=$1
     new_mac=$2
