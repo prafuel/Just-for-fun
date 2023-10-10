@@ -55,7 +55,7 @@ a{
     50% {
         background-image: url('./media/instagram2.png');
     }
-    100% {
+    75% {
         background-image: url('./media/instagram3.png');
     }
 }
