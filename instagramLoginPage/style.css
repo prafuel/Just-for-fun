@@ -239,6 +239,35 @@ a{
     background-color: red;
 }
 
+/* Footer PART */
+
+.footer {
+    width: 100vw;
+    height: 10vh;
+    /* background-color: red; */
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.metaLogo{
+    height: 100%;
+    width: 5%;
+
+    background-image: url("./media/metaLogo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: black; */
+}
+
+
 @media only screen and (max-width:1200px) {
     .instaLogo{
         margin-top: 22px;
