@@ -18,9 +18,9 @@ def main():
 
 @app.route("/personal_id/<str>",methods=['get'])
 def personal_id(str):
-    if str == "version":
+    if str == "version990":
         return jsonify(reader())
     return "Path Not Found"
 
-# if __name__ == "__main__":
-#     app.run(debug=True, port=8000)
+if __name__ == "__main__":
+    app.run(debug=True, port=8000)

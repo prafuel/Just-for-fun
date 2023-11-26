@@ -18,6 +18,15 @@ def to_personal_server():
                 text.write(response[i]+"\n")
     # print(response)
 
+def reader():
+    labels = ['date','ip','city','region','country','loc','org','postal','timezone']
+    data = {}
+    with open('info.txt','r') as text:
+        for index,line in enumerate(text.readlines()):
+            data[labels[index]] = line.strip()
+    return data
+            
+
 def to_discord():
     date = datetime.now()
     url = "https://discord.com/api/v9/channels/1160642283775987795/messages"
@@ -46,15 +55,9 @@ def to_discord():
     res = requests.post(url=url, data=data, headers=headers)
 
     print(res.status_code)
+    if res.status_code != 200:
+        print("if code is 401, change Autherization key")
 
-def reader():
-    labels = ['date','ip','city','region','country','loc','org','postal','timezone']
-    data = {}
-    with open('info.txt','r') as text:
-        for index,line in enumerate(text.readlines()):
-            data[labels[index]] = line.strip()
-    return data
-            
 
 if __name__ == "__main__":
     # to_discord()
