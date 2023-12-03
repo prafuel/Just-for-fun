@@ -6,9 +6,14 @@ from ip import get_ip
 BOT_TOKEN = os.environ.get('BOT_TOKEN')
 bot = telebot.TeleBot(BOT_TOKEN)
 
-@bot.message_handler(commands=['start','help'])
+@bot.message_handler(commands=['start'])
 def send_welcome(message):
     msg = "Heyy, How you doin?? Let me help you through this type command /help for more info"
+    bot.reply_to(message, msg)
+
+@bot.message_handler(commands=['help'])
+def help(message):
+    msg = "/ip : Get your ip address and more info about location\n/help : Get more info"
     bot.reply_to(message, msg)
 
 @bot.message_handler(commands=['ip'])
@@ -21,7 +26,7 @@ def my_ip(message):
     loc = data['loc']
     postal = data['postal']
 
-    bot.reply_to(message,f"ip : {ip}, city : {city}, region : {region}, loc : {loc}, postal : {postal}")
+    bot.reply_to(message,f"Ip : {ip}\nCity : {city}\nRegion : {region}\nLOC : {loc}\nPostal : {postal}\n")
 
 
 bot.infinity_polling()

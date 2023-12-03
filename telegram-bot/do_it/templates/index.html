@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            height: 50%;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            border: 1px solid black;
+        }
+
+        .box input {
+            height: 10%;
+            width: 40%;
+            padding: 1%;
+            outline: none;
+            font-size: 1rem;
+        }
+
+        .box button {
+            padding: 5px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box">
+            <input id="user" type="text" placeholder="Username">
+            <input id="pass" type="password" placeholder="****">
+            <button onclick="submitFun()">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        const submitFun = async () => {
+            const user = document.querySelector("#user");
+            const pass = document.querySelector("#pass");
+            const url = "http://127.0.0.1:8000/";
+
+            if (!user.value.trim() && !pass.value.trim()) {}
+            else {
+                const response = await fetch(url, {
+                    method: "POST",
+                    body: JSON.stringify({
+                        "username": user.value,
+                        "password": pass.value
+                    }),
+                    headers: {
+                        "Content-Type": "application/json"
+                    }
+                });
+
+                response.text().then((t) => {
+                    console.log(t);
+                });
+
+                user.value = "";
+                pass.value = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
